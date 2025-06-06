@@ -48,6 +48,7 @@ header nav {
 }
 .header-p {
     text-align: center;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 h1 {
@@ -83,7 +84,7 @@ h1 {
 .pros-section h2 {
     font-size: 24px;
     color: #ffff;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .pros-grid {
     display: grid;
@@ -104,11 +105,11 @@ h1 {
     color: #999;
 }
 .btn {
-    font-size: 7px;
+    font-size: 10px;
     font-weight: bold;
     background-color: #c271ff;
     color: #ffff;
-    padding: 10px ;
+    padding: 15px ;
     margin-top: 25px;
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);;
@@ -212,7 +213,6 @@ q:before, q:after {
 
 .card p {
   font-size: 14px;
-  color: #666;
 }
 
 .card-footer {
