@@ -1,0 +1,1 @@
+This is a starting from scratch project with html and scc
