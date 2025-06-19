@@ -1,1 +1,1 @@
-This is a starting from scratch project with html and scc
+This is a starting from scratch project with html and css
