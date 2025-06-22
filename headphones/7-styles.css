@@ -163,10 +163,14 @@ color: var(--scondary-color);
     justify-content: center;
     gap: 2.5rem;
 }
+.navbar__list-item{
+    transition: .4s linear;
+}
 .navbar__link{
     font-size: 1.2rem;
 }
-.navbar__list-item.active a{
+.navbar__list-item.active a,
+.navbar__list-item:hover a{
     color: var(--primary-color);
     font-weight: 600;
 }
@@ -214,6 +218,7 @@ line-height: 1.5;
     height: 100%;
     width: 100%;
     background-color: var(--primary-color);
+    /* Replaced image with the following code of clip path */
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     color: var(--text-color);
     position: relative;
@@ -221,6 +226,7 @@ line-height: 1.5;
 .pentagon__img{
     height: 100%;
     width: 100%;
+    display: none;
 }
 .pentagon__text{
     position: absolute;
@@ -252,7 +258,7 @@ font-size: 1.4rem;
     flex-direction: column;
     max-width: 50rem;
     margin: auto;
-    align-items: start;
+    align-items: center;
     gap: 1rem;
 }
 .contact .form input{
@@ -293,4 +299,61 @@ font-size: 1.4rem;
 .contact .form input:focus::placeholder,
 .contact .form textarea:focus::placeholder{
     opacity: 0;
+}
+/*  === END OF CONTACT SECTION */
+.footer{
+    padding: 8rem 0;
+    background-color: var(--scondary-color);
+    color: var(--text-color);
+}
+.footer__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__icons{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;  
+}
+.footer__icon{
+    cursor: pointer;
+}
+.footer__copy-right{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    opacity: 35.17%;
+}
+/* CSS ANIMATIONS */
+.btn{
+transition: .4s linear;
+cursor: pointer;
+
+}
+.btn:hover{
+    transform: translateY(10px) scale(0.9);
+
+}
+.card,
+.pentagon{
+transition: .4s linear;
+cursor: pointer;
+}
+.card:hover,
+.pentagon:hover{
+    transform: translateY(10px) scale(1.1);
+}
+.logo,
+.navbar__brand,
+.footer__icon{
+transition: .4s linear;
+cursor: pointer;
+
+}
+.logo:hover,
+.navbar__brand:hover,
+.footer__icon:hover{
+    transform: translateY(10px) scale(1.1);
 }

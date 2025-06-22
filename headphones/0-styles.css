@@ -1,101 +1,143 @@
-* {
-    font-family: 'source sans pro', sans-serif;
-    margin: 0;
+@font-face {
+    font-family: 'source-pro';
+    src: url(./source-sans-pro/SourceSansPro-Regular.otf);
 }
+:root{
+    --text-color:#fff;
+    --primary-color:#FF6565;
+    --scondary-color:#071629;
+    --fs-lg:4.6rem;
+    --fs-md:3.2rem;
+    --fs-sm:1.6rem;
+}
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'source-pro';
+    font-weight: 400;
+}
+html{
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    display:inline-block;
+}
+img{
+    display: block;
+}
+ul{
+    list-style: none;
+}
+/* === UTILITIES */
+.container{
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+}
+.btn{
+    padding: 1.2rem 3.2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-radius: 3rem;
 
-header {
-    background-image: url(images/headphones_hero_1.jpg);
+}
+.btn--cta{
+    background-color: var(--primary-color);
+
+}
+/* ===END OF UTILITIES */
+/* === HEADER STYLES === */
+.header{
+    min-height: 100vh;
+    background: url(./images/background_1.png);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 800px;
-    color: #ffff;
-}
-.header-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 650px;
     width: 100%;
-    margin: 300px auto;
 }
-.header-content {
-    padding-top: 20px;
-    font-size: 15px;
-    font-weight: lighter;
-    line-height: 1.5;
-}
-
-/* Nav section */
-.navbar {
+.navbar{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 30px 200px;
+    padding: 2.5rem 0;
 }
-.navbar img {
-    width: 170px;
-}
-.nav-list {
-    list-style: none;
+.navbar__brand__open{
     display: flex;
-    gap: 30px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap:4rem;
 }
-.nav-list a, .header-title a {
-    text-decoration: none;
-    font-size: 12px;
-    color: #ffff;
-    transition: color 0.3s;
+.navbar__toggler{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 35px;
+    cursor: pointer;
 }
-.nav-list li a:hover,
-.nav-list li a:active {
-    color: #FF6565;
+.navbar__toggler .line{
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .5rem;
+    transform: all .4s;
 }
-.btn {
-    background-color: #FF6565;
-    padding: 10px 20px;
-    margin: 30px auto;
-    border-radius: 50px;
+.navbar__toggler .line.middle{
+    width: 25px;
 }
-.btn:hover, .btn:active  { 
-    background-color: #f51f1f;
+.navbar__toggler.active .line.middle{
+    opacity: 0;
 }
+.navbar__toggler.active .line.top{
+    transform: translateY(10px) rotate(-45deg);
+}
+.navbar__toggler.active .line.bottom{
+    transform: translateY(-10px) rotate(45deg);
+}
+.navbar__brand{
+    width: 16rem;
+}
+.navbar__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+.navbar__link{
+    font-size: 1.2rem;
+}
+.navbar__list-item.active a{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.intro__section{
 
-
-/* Hide checkbox and hamburger by default */
-#menu-toggle {
-  display: none;
+    max-width: 65rem;
+    width: 100%;
+    margin:15rem auto 0 auto;
+    text-align: center;
+    color: var(--text-color);
 }
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #333;
+.intro__title{
+ font-weight: 700;
+ font-size: var(--fs-md);
+ margin-bottom: 0.5rem;   
 }
+.intro__sub-title{
+    margin-bottom: 1rem; 
+    font-size: 1.2rem;  
+    margin-bottom: 3rem;
 
-/* Responsive Styles */
-@media (max-width: 480px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.7);
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 150px;
-        border-radius: 5px;
-        padding: 10px;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    #menu-toggle:checked + .menu-icon + .nav-list {
-        display: flex;
-    }
-
-    .navbar {
-        position: relative;
-    }
 }
+.intro__desc{
+    margin-top: 3rem;
+font-size: 1.6rem;
+line-height: 1.5;
+}
+/* === END OF HEADER STYLES === */

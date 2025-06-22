@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Headphones Website</title>
-    <link rel="stylesheet" href="4-styles.css" />
+    <link rel="stylesheet" href="8-styles.css" />
 </head>
 
 <body>
@@ -17,16 +17,16 @@
             <nav class="navbar">
                 <div class="navbar__brand__open">
                     <img src="./images/icons/logo.svg" alt="Headphones logo" class="navbar__brand">
-                    <div class="navbar__toggler active">
+                    <div class="navbar__toggler ">
                         <div class="line top"></div>
                         <div class="line middle"></div>
                         <div class="line bottom"></div>
                     </div>
                 </div>
                 <ul class="navbar__list">
-                    <li class="navbar__list-item active"><a href="#" class="navbar__link">What We Do</a></li>
-                    <li class="navbar__list-item"><a href="#" class="navbar__link">Our results</a></li>
-                    <li class="navbar__list-item"><a href="#" class="navbar__link">Contact us</a></li>
+                    <li class="navbar__list-item active"><a href="#wwd" class="navbar__link">What We Do</a></li>
+                    <li class="navbar__list-item"><a href="#results" class="navbar__link">Our results</a></li>
+                    <li class="navbar__list-item"><a href="#contact" class="navbar__link">Contact us</a></li>
                 </ul>
             </nav>
             <!-- === NAVIGATION END === -->
@@ -51,7 +51,7 @@
     <!-- === HEADER END === -->
     <main>
         <!-- === WHAT WE DO SECTION -->
-        <section class="wwwd__section">
+        <section class="wwwd__section" id="wwd">
             <div class="container">
                 <div class="section__header">
                     <h2>What we do...</h2>
@@ -96,7 +96,7 @@
             </div>
         </section>
         <!-- === RESULTS SECTION ===  -->
-        <section class="results__section">
+        <section class="results__section" id="results">
             <div class="container">
                 <div class="section__header">
                     <h2>Our results</h2>
@@ -111,7 +111,8 @@
                 <div class="flex-row">
                     <div class="flex-col">
                         <div class="pentagon">
-                            <img src="./images/Polygon.png" alt="pentagon" class="pentagon__img">
+                            <!-- <img src="./images/Polygon.png" alt="pentagon" class="pentagon__img"> -->
+                            <!-- Replacing the actual image with css codes -->
                             <div class="pentagon__text">
                                 <h3 class="pentagon__title">+2%</h3>
                                 <div class="pentagon__desc">Lorem ipsum dolor</div>
@@ -120,7 +121,8 @@
                     </div>
                     <div class="flex-col">
                         <div class="pentagon">
-                            <img src="./images/Polygon.png" alt="pentagon" class="pentagon__img">
+                            <!-- <img src="./images/Polygon.png" alt="pentagon" class="pentagon__img"> -->
+                            <!-- Replacing the actual image with css codes -->
                             <div class="pentagon__text">
                                 <h3 class="pentagon__title">+2%</h3>
                                 <div class="pentagon__desc">Lorem ipsum dolor</div>
@@ -129,7 +131,8 @@
                     </div>
                     <div class="flex-col">
                         <div class="pentagon">
-                            <img src="./images/Polygon.png" alt="pentagon" class="pentagon__img">
+                            <!-- <img src="./images/Polygon.png" alt="pentagon" class="pentagon__img"> -->
+                            <!-- Replacing the actual image with css codes -->
                             <div class="pentagon__text">
                                 <h3 class="pentagon__title">+2%</h3>
                                 <div class="pentagon__desc">Lorem ipsum dolor</div>
@@ -138,7 +141,8 @@
                     </div>
                     <div class="flex-col">
                         <div class="pentagon">
-                            <img src="./images/Polygon.png" alt="pentagon" class="pentagon__img">
+                            <!-- <img src="./images/Polygon.png" alt="pentagon" class="pentagon__img"> -->
+                            <!-- Replacing the actual image with css codes -->
                             <div class="pentagon__text">
                                 <h3 class="pentagon__title">+2%</h3>
                                 <div class="pentagon__desc">Lorem ipsum dolor</div>
@@ -150,7 +154,7 @@
             </div>
         </section>
         <!-- === END OF OUR RESULTS SECTION -->
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="container">
                 <div class="section__header">
                     <h2>Contact</h2>
@@ -170,9 +174,12 @@
             <div class="footer__row">
                 <img src="./images/icons/logo.svg" alt="" class="logo">
                 <div class="footer__icons">
-                    <a href="" class="footer__icon"><img src="./images/icons/Facebook_White-1.svg" alt="Facebook icon"></a>
-                    <a href="" class="footer__icon"><img src="./images/icons/Twitter_White-2.svg" alt="twitter icon"></a>
-                    <a href="" class="footer__icon"><img src="./images/icons/Instagram_White-1.svg" alt="Instagram icon"></a>
+                    <a href="" class="footer__icon"><img src="./images/icons/Facebook_White-1.svg"
+                            alt="Facebook icon"></a>
+                    <a href="" class="footer__icon"><img src="./images/icons/Twitter_White-2.svg"
+                            alt="twitter icon"></a>
+                    <a href="" class="footer__icon"><img src="./images/icons/Instagram_White-1.svg"
+                            alt="Instagram icon"></a>
                 </div>
             </div>
             <p class="footer__copy-right">
@@ -180,6 +187,7 @@
             </p>
         </div>
     </footer>
+    <script src="8-script.js"></script>
 </body>
 
 </html>

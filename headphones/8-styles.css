@@ -21,6 +21,8 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding: 30px;
 }
 a{
     text-decoration: none;
@@ -87,6 +89,7 @@ max-width: 65rem;
 text-align: center;
 margin: 0 auto 7rem auto;
 color: var(--scondary-color);
+padding-bottom: 3rem;
 }
 .section__header h2{
     font-size: 3.2rem;
@@ -163,10 +166,14 @@ color: var(--scondary-color);
     justify-content: center;
     gap: 2.5rem;
 }
+.navbar__list-item{
+    transition: .4s linear;
+}
 .navbar__link{
     font-size: 1.2rem;
 }
-.navbar__list-item.active a{
+.navbar__list-item.active a,
+.navbar__list-item:hover a{
     color: var(--primary-color);
     font-weight: 600;
 }
@@ -214,6 +221,7 @@ line-height: 1.5;
     height: 100%;
     width: 100%;
     background-color: var(--primary-color);
+    /* Replaced image with the following code of clip path */
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     color: var(--text-color);
     position: relative;
@@ -221,6 +229,7 @@ line-height: 1.5;
 .pentagon__img{
     height: 100%;
     width: 100%;
+    display: none;
 }
 .pentagon__text{
     position: absolute;
@@ -252,7 +261,7 @@ font-size: 1.4rem;
     flex-direction: column;
     max-width: 50rem;
     margin: auto;
-    align-items: start;
+    align-items: center;
     gap: 1rem;
 }
 .contact .form input{
@@ -293,4 +302,131 @@ font-size: 1.4rem;
 .contact .form input:focus::placeholder,
 .contact .form textarea:focus::placeholder{
     opacity: 0;
+}
+/*  === END OF CONTACT SECTION */
+.footer{
+    padding: 8rem 0;
+    background-color: var(--scondary-color);
+    color: var(--text-color);
+}
+.footer__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__icons{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;  
+}
+.footer__icon{
+    cursor: pointer;
+}
+.footer__copy-right{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    opacity: 35.17%;
+}
+/* CSS ANIMATIONS */
+.btn{
+transition: .4s linear;
+cursor: pointer;
+
+}
+.btn:hover{
+    transform: translateY(10px) scale(0.9);
+
+}
+.card,
+.pentagon{
+transition: .4s linear;
+cursor: pointer;
+}
+.card:hover,
+.pentagon:hover{
+    transform: translateY(10px) scale(1.1);
+}
+.logo,
+.navbar__brand,
+.footer__icon{
+transition: .4s linear;
+cursor: pointer;
+
+}
+.logo:hover,
+.navbar__brand:hover,
+.footer__icon:hover{
+    transform: translateY(10px) scale(1.1);
+}
+/* ===  END OF ANIMATIONS */
+
+/* === MEDIA QUERIES FOR RESPONSIVE DESIGN */
+@media only screen and (max-width: 900px) {
+    .flex-row{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        align-items: center;
+    }
+    .flex-col {
+        flex: 1 0 30rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex-col .pentagon{
+        height: 19rem;
+        width: 19rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .navbar__toggler{
+        display: flex;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: start;
+    }
+    .navbar__list{
+        margin-top: 5rem;
+        flex-direction: column;
+        height: 0;
+        overflow: hidden;
+        align-items: center;
+        width: 100%;
+        transition: height .3s ease;
+        
+    }
+    .navbar__list.active{
+        height: 95.7px;
+
+    }
+    .flex-row{
+       flex-direction: column;
+    }
+    .flex-col {
+        flex: 1 0 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex-col .pentagon{
+        height: 19rem;
+        width: 19rem;
+    }
+    .footer__row{
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .intro__section{
+        margin:4rem auto 0 auto;
+    }
+    /* animations */
+    .logo:hover,
+.navbar__brand:hover{
+    transform: none;
+}
 }
